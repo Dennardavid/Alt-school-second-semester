@@ -3,17 +3,19 @@ import { useEffect, useState } from "react";
 import "./repolist.css";
 
 function RepoListComponent() {
-  /* Use state */
-  const [repo, userRepo] = useState([]);
+  /* states */
+  const [repo, setUserRepo] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
+  const [prevPage, setPrevPage] = useState();
 
+  /* API fetch n */
   const fetchMyRepos = () => {
     fetch(
       `https://api.github.com/users/Dennardavid/repos?per_page=12&page=${currentPage}`
     )
       .then((response) => response.json())
       .then((data) => {
-        userRepo(data);
+        setUserRepo(data);
       });
   };
 
@@ -42,7 +44,15 @@ function RepoListComponent() {
           <span>MY</span> REPOSITORIES
         </h2>
       </u>
-      <section className="repo-container">{repoElements}</section>
+      <section className="repo-container">
+        {repoElements}
+        <button onClick={() => setPrevPage(currentPage - 1)}>
+          Previous page
+        </button>
+        <button onClick={() => setCurrentPage(currentPage + 1)}>
+          next page
+        </button>
+      </section>
     </section>
   );
 }
