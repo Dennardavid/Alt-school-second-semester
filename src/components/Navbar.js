@@ -1,12 +1,24 @@
 import React from "react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 function Navbar() {
-  /* List rendering for the navbar  */
-  const pages = ["Home", "My Repos"];
+  /* List rendering for the navbar linking to other pages */
+  const pages = [
+    <Link to="/" className="list">
+      Home
+    </Link>,
+    <Link to="/myrepos" className="list">
+      MyRepos
+    </Link>,
+  ];
 
   const navbarItems = pages.map((pages) => {
-    return <li key={pages}>{pages}</li>;
+    return (
+      <li key={pages} className="pageloader">
+        {pages}
+      </li>
+    );
   });
   return (
     <header>

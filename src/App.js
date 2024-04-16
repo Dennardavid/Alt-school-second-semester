@@ -1,15 +1,15 @@
 import "./App.css";
 import React from "react";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import HeroSection from "./components/main";
-
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/home";
+import MyRepos from "./pages/myrepos";
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <HeroSection />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/myrepos" element={<MyRepos />} />
+      </Routes>
     </div>
   );
 }

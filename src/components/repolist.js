@@ -44,15 +44,21 @@ function RepoListComponent() {
           <span>MY</span> REPOSITORIES
         </h2>
       </u>
-      <section className="repo-container">
-        {repoElements}
-        <button onClick={() => setPrevPage(currentPage - 1)}>
+      <section className="repo-container">{repoElements}</section>
+      <div className="buttondiv">
+        <button
+          onClick={() => setPrevPage(currentPage - 1)}
+          className="page_buttons"
+        >
           Previous page
         </button>
-        <button onClick={() => setCurrentPage(currentPage + 1)}>
+        <button
+          onClick={() => setCurrentPage(currentPage + 1)}
+          className="page_buttons"
+        >
           next page
         </button>
-      </section>
+      </div>
     </section>
   );
 }

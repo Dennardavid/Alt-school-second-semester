@@ -23,6 +23,7 @@ span {
   border-radius: 20px;
   border: 1px solid #013440;
   padding: 20px;
+  cursor: pointer;
 
   box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.5), 0 0px 5px 0 rgba(0, 0, 0, 0.19);
 }
@@ -42,10 +43,31 @@ span {
   font-size: 16px;
   color: #f05323;
 }
+
 .repo-container {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  column-gap: 50px;
+  column-gap: 40px;
   row-gap: 20px;
   justify-content: center;
+}
+.buttondiv {
+  padding-top: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.page_buttons {
+  background-color: #013440;
+  padding: 10px;
+  width: 200px;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  cursor: pointer;
 }
