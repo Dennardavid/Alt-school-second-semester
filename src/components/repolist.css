@@ -1,0 +1,50 @@
+.repos {
+  background-color: rgba(240, 83, 35, 0.5);
+  padding: 20px 100px 20px 100px;
+}
+.repo_header {
+  color: #fff;
+  font-weight: 600px;
+  font-size: 50px;
+  font-family: "Ojuju", sans-serif;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+u {
+  text-decoration-color: #f05323;
+}
+span {
+  color: #013440;
+}
+.card {
+  background-color: #efd9b4;
+  width: 350px;
+  border-radius: 20px;
+  border: 1px solid #013440;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.5), 0 0px 5px 0 rgba(0, 0, 0, 0.19);
+}
+.repoheader {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  color: #013440;
+}
+.Language,
+.date,
+.visibility {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  color: #f05323;
+}
+.repo-container {
+  /* background-color: red; */
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  column-gap: 50px;
+}
