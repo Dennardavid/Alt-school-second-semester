@@ -1,0 +1,46 @@
+.hero {
+  display: flex;
+  padding: 20px 90px 20px 90px;
+  justify-content: space-between;
+}
+/* Image style */
+.soft-boy {
+  width: 300px;
+  height: 500px;
+  border-radius: 10px;
+  border: 2px solid #013440;
+  box-shadow: 0 7px 8px 0 rgba(0, 0, 0, 0.5), 0 5px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.hero-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  color: #013440;
+}
+.job-desc {
+  background-color: #013440;
+  width: 80%;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+.job-desc p {
+  color: #fff;
+}
+.my_name {
+  font-family: "Ojuju", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-size: 60px;
+  margin-left: -3px;
+  margin-bottom: 5px;
+  line-height: 50px;
+  font-style: normal;
+  color: #f05323;
+}

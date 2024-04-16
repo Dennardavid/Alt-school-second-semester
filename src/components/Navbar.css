@@ -1,0 +1,25 @@
+.Nav h2 {
+  font-family: "Ojuju", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  color: #f05323;
+}
+.Nav {
+  display: flex;
+  align-items: center;
+  padding: 20px 90px 20px 90px;
+  justify-content: space-between;
+  background-color: #013440;
+}
+.list {
+  display: flex;
+  list-style: none;
+  width: 25%;
+  justify-content: space-evenly;
+  color: #fff;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}

@@ -1,0 +1,25 @@
+.footer h2 {
+  font-family: "Ojuju", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  color: #f05323;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  padding: 20px 50px 20px 90px;
+  justify-content: space-between;
+  background-color: #013440;
+}
+.footer-list {
+  display: flex;
+  list-style: none;
+  width: 70%;
+  justify-content: space-evenly;
+  color: #fff;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
