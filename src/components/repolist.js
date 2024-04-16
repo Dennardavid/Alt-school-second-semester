@@ -5,9 +5,12 @@ import "./repolist.css";
 function RepoListComponent() {
   /* Use state */
   const [repo, userRepo] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
 
   const fetchMyRepos = () => {
-    fetch(`https://api.github.com/users/Dennardavid/repos`)
+    fetch(
+      `https://api.github.com/users/Dennardavid/repos?per_page=12&page=${currentPage}`
+    )
       .then((response) => response.json())
       .then((data) => {
         userRepo(data);
@@ -16,7 +19,7 @@ function RepoListComponent() {
 
   useEffect(() => {
     fetchMyRepos();
-  }, []);
+  }, [currentPage]);
 
   const repoElements = repo.map((repoElement) => {
     return (

@@ -23,7 +23,7 @@ span {
   border-radius: 20px;
   border: 1px solid #013440;
   padding: 20px;
-  margin-bottom: 20px;
+
   box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.5), 0 0px 5px 0 rgba(0, 0, 0, 0.19);
 }
 .repoheader {
@@ -43,8 +43,9 @@ span {
   color: #f05323;
 }
 .repo-container {
-  /* background-color: red; */
   display: grid;
   grid-template-columns: auto auto auto auto;
   column-gap: 50px;
+  row-gap: 20px;
+  justify-content: center;
 }
