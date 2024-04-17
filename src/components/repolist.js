@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { useEffect, useState } from "react";
 import "./repolist.css";
 
@@ -16,6 +16,9 @@ function RepoListComponent() {
       .then((response) => response.json())
       .then((data) => {
         setUserRepo(data);
+      })
+      .catch((error) => {
+        console.log(error);
       });
   };
 
@@ -26,13 +29,15 @@ function RepoListComponent() {
   const repoElements = repo.map((repoElement) => {
     return (
       <article className="card" key={repoElement.id}>
-        <h2 className="repoheader">{repoElement.name}</h2>
-        <p className="Language">
-          Langauge:{" "}
-          {repoElement.language === null ? "none" : repoElement.language}
-        </p>
-        <p className="date">Date created: {repoElement.created_at}</p>
-        <p className="visibility">Visibility: {repoElement.visibility}</p>
+        <Suspense fallback="Loading...">
+          <h2 className="repoheader">{repoElement.name}</h2>
+          <p className="Language">
+            Langauge:{" "}
+            {repoElement.language === null ? "none" : repoElement.language}
+          </p>
+          <p className="date">Date created: {repoElement.created_at}</p>
+          <p className="visibility">Visibility: {repoElement.visibility}</p>
+        </Suspense>
       </article>
     );
   });
