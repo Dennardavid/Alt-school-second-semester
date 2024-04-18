@@ -1,17 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-// import "./index.css";
 import App from "./App";
-// import ErrorPage from "./pages/Errorpage";
+import ErrorFetchingPage from "./pages/Errorboundary";
 import { BrowserRouter } from "react-router-dom";
-import ErrorBoundary from "./Errorboundary";
-// import { ErrorBoundary } from "react-error-boundary";
+import { ErrorBoundary } from "react-error-boundary";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <React.StrictMode>
-      <ErrorBoundary fallback="<div>Hello I work</div>">
+      {/* Error Boundary implementation */}
+      <ErrorBoundary
+        FallbackComponent={<ErrorFetchingPage />}
+        onError={() => {
+          console.log("An error occurred");
+        }}
+      >
         <App />
       </ErrorBoundary>
     </React.StrictMode>
