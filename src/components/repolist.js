@@ -17,8 +17,6 @@ function RepoListComponent() {
       .then((response) => response.json())
       .then((data) => {
         setUserRepo(data);
-        console.log(data.length);
-        // setPageCount(data.length / 3);
       })
       .catch((error) => {
         console.log(error);
