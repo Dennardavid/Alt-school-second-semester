@@ -8,7 +8,6 @@ function ErrorPage({ error }) {
       <img src={Err404} alt="404" className="errorimg" />
       <h2 className="errorheader">404</h2>
       <p>Ooops page not found....</p>
-      {/* <button>Refresh page</button> */}
     </div>
   );
 }
