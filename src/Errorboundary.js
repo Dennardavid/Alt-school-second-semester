@@ -1,5 +1,5 @@
 import React from "react";
-// import { useErrorBoundary } from "react-error-boundary";
+// import { useErrorBoundary } from " react-error-boundary";
 
 class ErrorBoundary extends React.Component {
   state = { hasError: false };

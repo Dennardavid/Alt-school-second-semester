@@ -5,11 +5,11 @@ import RepoListComponent from "../components/repolist";
 
 function MyRepos() {
   return (
-    <>
+    <div className="repopage">
       <Navbar />
       <RepoListComponent />
       <Footer />
-    </>
+    </div>
   );
 }
 

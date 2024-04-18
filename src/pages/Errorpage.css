@@ -1,0 +1,18 @@
+.fullpage {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.errorimg {
+  width: 35%;
+}
+.errorheader {
+  font-family: "Ojuju", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-size: 50px;
+  font-style: normal;
+  color: #f05323;
+}
