@@ -1,7 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import "./repolist.css";
-import { Route, Router, useSearchParams } from "react-router-dom";
 
 function RepoListComponent() {
   /* states */
@@ -61,7 +60,7 @@ function RepoListComponent() {
         >
           Previous page
         </button>
-        {/* <p>{pageCount}</p> */}
+
         <button
           onClick={() => {
             if (currentPage < 4) {

@@ -13,10 +13,8 @@ root.render(
       console.log("An error occurred");
     }}
   >
-    <BrowserRouter>
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
-    </BrowserRouter>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
   </ErrorBoundary>
 );
