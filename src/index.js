@@ -7,17 +7,16 @@ import { ErrorBoundary } from "react-error-boundary";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
-    <React.StrictMode>
-      {/* Error Boundary implementation */}
-      <ErrorBoundary
-        FallbackComponent={<ErrorFetchingPage />}
-        onError={() => {
-          console.log("An error occurred");
-        }}
-      >
+  <ErrorBoundary
+    FallbackComponent={<ErrorFetchingPage />}
+    onError={() => {
+      console.log("An error occurred");
+    }}
+  >
+    <BrowserRouter>
+      <React.StrictMode>
         <App />
-      </ErrorBoundary>
-    </React.StrictMode>
-  </BrowserRouter>
+      </React.StrictMode>
+    </BrowserRouter>
+  </ErrorBoundary>
 );

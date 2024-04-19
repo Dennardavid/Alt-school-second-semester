@@ -1,13 +1,13 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import "./repolist.css";
+import { Route, Router, useSearchParams } from "react-router-dom";
 
 function RepoListComponent() {
   /* states */
   const [repo, setUserRepo] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [, setPrevPage] = useState(currentPage);
-  // const [pageCount, setPageCount] = useState();
 
   /* API fetch n */
   const fetchMyRepos = () => {

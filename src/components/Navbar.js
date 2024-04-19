@@ -1,16 +1,32 @@
 import React from "react";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   /* List rendering for the navbar linking to other pages */
   const pages = [
-    <Link to="/" className="list">
+    <NavLink
+      style={({ isActive }) =>
+        isActive
+          ? { color: "#f05323", textDecoration: "underline" }
+          : { color: "#ffff" }
+      }
+      to="/"
+      className="list"
+    >
       Home
-    </Link>,
-    <Link to="/myrepos" className="list">
+    </NavLink>,
+    <NavLink
+      style={({ isActive }) =>
+        isActive
+          ? { color: "#f05323", textDecoration: "underline" }
+          : { color: "#ffff" }
+      }
+      to="/myrepos"
+      className="list"
+    >
       MyRepos
-    </Link>,
+    </NavLink>,
   ];
 
   const navbarItems = pages.map((pages) => {
