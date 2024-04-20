@@ -37,14 +37,17 @@ function RepoDetails() {
             </p>
             <p>Date created: {details.created_at}</p>
             <p>Visibility: {details.visibility}</p>
-            <p>
-              <a
-                href={`https://github.com/${details.full_name}`}
-                target="_blank"
-              >
-                View on Github
-              </a>
-            </p>
+            <div className="buttondiv">
+              <button className="page_buttons">
+                <a
+                  href={`https://github.com/${details.full_name}`}
+                  target="_blank"
+                  className="viewongit"
+                >
+                  View on Github
+                </a>
+              </button>
+            </div>
           </div>
         </section>
       </div>

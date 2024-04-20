@@ -37,3 +37,31 @@
   background-color: rgba(240, 83, 35, 0.5);
   box-shadow: 0 7px 8px 0 rgba(0, 0, 0, 0.5), 0 5px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.page_buttons {
+  background-color: #013440;
+  padding: 10px;
+  width: 200px;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  cursor: pointer;
+}
+.viewongit {
+  color: #fff;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  text-decoration: none;
+}
+.buttondiv {
+  padding-top: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}

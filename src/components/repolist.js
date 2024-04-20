@@ -32,12 +32,10 @@ function RepoListComponent() {
       <Link to={`/repodetails/${repoElement.name}`} className="repolink">
         <article className="card" key={repoElement.id}>
           <h2 className="repoheader">{repoElement.name}</h2>
-          {/*  <p className="Language">
-            Langauge:{" "}
-            {repoElement.language === null ? "none" : repoElement.language}
-          </p>
-          <p className="date">Date created: {repoElement.created_at}</p> */}
           <p className="visibility">Visibility: {repoElement.visibility}</p>
+          <div className="buttondiv">
+            <button className="page_buttons">View details</button>
+          </div>
         </article>
       </Link>
     );
