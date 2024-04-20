@@ -1,5 +1,9 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import React from "react";
+import "../App.css";
 
 function RepoDetails() {
   const { id } = useParams();
@@ -10,35 +14,42 @@ function RepoDetails() {
       .then((response) => response.json())
       .then((data) => {
         setDetails(data);
+        console.log(data);
       });
   }, []);
 
   return (
     <div id="repodetail">
+      <Navbar />
       <div className="repodetail-card">
-        <h2 className="repo-name">{details.name}</h2>
-        <div className="repo-mini-details">
-          <p>Stars: {details.stargazers_count}</p>
-          <p>Watch: {details.watchers}</p>
-          <p>Forks: {details.forks}</p>
-        </div>
-        <p>
-          Main Language: {details.language === null ? "none" : details.language}
-        </p>
-        {/* <p>
-          Live site:{" "}
-          {deployment.length === 0 ? (
-            `none`
-          ) : (
-            <a href={`https://mbonamensa.github.io/${details.name}`}>
-              mbonamensa.github.io/{details.name}
-            </a>
-          )}
-        </p> */}
-        <p>
-          <a href={`https://github.com/${details.full_name}`}>View on Github</a>
-        </p>
+        <section className="repo_card">
+          <h1 className="repo-name">{details.name}</h1>
+          <div className="repo-mini-details">
+            <p>Stars: {details.stargazers_count}</p>
+            <p>Watch: {details.watchers}</p>
+            <p>Forks: {details.forks}</p>
+            <p>
+              Main Language:{" "}
+              {details.language === null ? "none" : details.language}
+            </p>
+            <p>
+              License: {details.license === null ? "none" : details.license}
+            </p>
+            <p>Date created: {details.created_at}</p>
+            <p>Visibility: {details.visibility}</p>
+            <p>
+              <a
+                href={`https://github.com/${details.full_name}`}
+                target="_blank"
+              >
+                View on Github
+              </a>
+            </p>
+          </div>
+        </section>
       </div>
+
+      <Footer />
     </div>
   );
 }

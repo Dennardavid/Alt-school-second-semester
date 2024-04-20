@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./repolist.css";
 
 function RepoListComponent() {
@@ -28,15 +29,17 @@ function RepoListComponent() {
 
   const repoElements = repo.map((repoElement) => {
     return (
-      <article className="card" key={repoElement.id}>
-        <h2 className="repoheader">{repoElement.name}</h2>
-        <p className="Language">
-          Langauge:{" "}
-          {repoElement.language === null ? "none" : repoElement.language}
-        </p>
-        <p className="date">Date created: {repoElement.created_at}</p>
-        <p className="visibility">Visibility: {repoElement.visibility}</p>
-      </article>
+      <Link to={`/repodetails/${repoElement.name}`} className="repolink">
+        <article className="card" key={repoElement.id}>
+          <h2 className="repoheader">{repoElement.name}</h2>
+          {/*  <p className="Language">
+            Langauge:{" "}
+            {repoElement.language === null ? "none" : repoElement.language}
+          </p>
+          <p className="date">Date created: {repoElement.created_at}</p> */}
+          <p className="visibility">Visibility: {repoElement.visibility}</p>
+        </article>
+      </Link>
     );
   });
 
@@ -65,9 +68,6 @@ function RepoListComponent() {
           onClick={() => {
             if (currentPage < 4) {
               setCurrentPage(currentPage + 1);
-              console.log(currentPage);
-            } else {
-              setCurrentPage(1);
             }
           }}
           className="page_buttons"

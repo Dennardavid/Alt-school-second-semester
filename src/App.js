@@ -10,15 +10,15 @@ import Home from "./pages/home";
 import MyRepos from "./pages/myrepos";
 import ErrorPage from "./pages/Errorpage";
 import RepoDetails from "./pages/repodetails";
-import AppOutlet from "./components/AppOutlet";
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements([
       <Route path="/" element={<Home />} />,
       <Route path="/myrepos" element={<MyRepos />} />,
-      <Route path="/repodetails" element={<AppOutlet />}>
-        <Route path=":id" element={<RepoDetails />} />;
+      <Route path="/repodetails">
+        <Route path=":id" element={<RepoDetails />} />,
+        <Route path="*" element={<ErrorPage />} />,
       </Route>,
       <Route path="*" element={<ErrorPage />} />,
     ])

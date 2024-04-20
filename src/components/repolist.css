@@ -71,3 +71,6 @@ span {
   font-size: 16px;
   cursor: pointer;
 }
+.repolink {
+  text-decoration: none;
+}
