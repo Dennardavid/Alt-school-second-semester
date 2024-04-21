@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import React from "react";
 import "../App.css";
+import { FaCodeFork, FaEye, FaGithub, FaRegStar } from "react-icons/fa6";
 
 function RepoDetails() {
   const { id } = useParams();
@@ -23,32 +24,44 @@ function RepoDetails() {
       <Navbar />
       <div className="repodetail-card">
         <section className="repo_card">
+          <div className="just">
+            <FaGithub className="justimg" />
+          </div>
+
           <h1 className="repo-name">{details.name}</h1>
           <div className="repo-mini-details">
-            <p>Stars: {details.stargazers_count}</p>
-            <p>Watch: {details.watchers}</p>
-            <p>Forks: {details.forks}</p>
-            <p>
-              Main Language:{" "}
-              {details.language === null ? "none" : details.language}
+            <p className="repo-stats">
+              <FaRegStar />
+              Stars: {details.stargazers_count}
             </p>
-            <p>
-              License: {details.license === null ? "none" : details.license}
+            <p className="repo-stats">
+              <FaEye />
+              Watch: {details.watchers}
             </p>
-            <p>Date created: {details.created_at}</p>
-            <p>Visibility: {details.visibility}</p>
-            <div className="buttondiv">
-              <button className="page_buttons">
-                <a
-                  href={`https://github.com/${details.full_name}`}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="viewongit"
-                >
-                  View on Github
-                </a>
-              </button>
-            </div>
+            <p className="repo-stats">
+              <FaCodeFork />
+              Forks: {details.forks}
+            </p>
+          </div>
+
+          <p>
+            Main Language:{" "}
+            {details.language === null ? "none" : details.language}
+          </p>
+          <p>License: {details.license === null ? "none" : details.license}</p>
+          <p>Date created: {details.created_at}</p>
+          <p>Visibility: {details.visibility}</p>
+          <div className="buttondiv">
+            <button className="page_buttons">
+              <a
+                href={`https://github.com/${details.full_name}`}
+                target="_blank"
+                rel="noreferrer"
+                className="viewongit"
+              >
+                View on Github
+              </a>
+            </button>
           </div>
         </section>
       </div>

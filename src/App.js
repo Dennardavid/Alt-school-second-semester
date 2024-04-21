@@ -16,12 +16,12 @@ function App() {
     {
       path: "/myrepos",
       element: <MyRepos />,
-      errorElement: <ErrorPage />,
+      // errorElement: <ErrorPage />,
     },
     {
       path: "/repodetails/:id",
       element: <RepoDetails />,
-      errorElement: <ErrorPage />,
+      // errorElement: <ErrorPage />,
     },
   ]);
   return (

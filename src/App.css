@@ -49,6 +49,7 @@
   font-style: normal;
   font-size: 16px;
   cursor: pointer;
+  margin-top: 30px;
 }
 .viewongit {
   color: #fff;
@@ -64,4 +65,24 @@
   gap: 20px;
   align-items: center;
   justify-content: center;
+}
+.repo-mini-details {
+  display: flex;
+  /* background-color: green; */
+  gap: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.just,
+.repo-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.justimg {
+  color: #013440;
+  width: 30px;
+}
+.repo-stats {
+  gap: 5px;
 }
