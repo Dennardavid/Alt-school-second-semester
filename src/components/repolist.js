@@ -32,7 +32,11 @@ function RepoListComponent() {
   /* Mapping through the fetched repos and returning them in articles  */
   const repoElements = repo.map((repoElement) => {
     return (
-      <Link to={`/repodetails/${repoElement.name}`} className="repolink">
+      <Link
+        key={repoElement.id}
+        to={`/repodetails/${repoElement.name}`}
+        className="repolink"
+      >
         <article className="card" key={repoElement.id}>
           <div className="just">
             <FaGithub className="justimg" />

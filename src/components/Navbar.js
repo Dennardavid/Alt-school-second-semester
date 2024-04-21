@@ -32,7 +32,7 @@ function Navbar() {
 
   const navbarItems = pages.map((pages) => {
     return (
-      <li key={pages} className="pageloader">
+      <li key={crypto.randomUUID()} className="pageloader">
         {pages}
       </li>
     );
