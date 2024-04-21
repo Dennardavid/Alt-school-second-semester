@@ -16,7 +16,7 @@ function RepoDetails() {
         setDetails(data);
         console.log(data);
       });
-  }, []);
+  }, [id]);
 
   return (
     <div id="repodetail">
@@ -42,6 +42,7 @@ function RepoDetails() {
                 <a
                   href={`https://github.com/${details.full_name}`}
                   target="_blank"
+                  rel="noreferrer"
                   className="viewongit"
                 >
                   View on Github
