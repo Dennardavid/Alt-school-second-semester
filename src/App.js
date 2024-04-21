@@ -7,6 +7,7 @@ import ErrorPage from "./pages/Errorpage";
 import RepoDetails from "./pages/repodetails";
 
 function App() {
+  /* Page routing using react-router-dom */
   const router = createBrowserRouter([
     {
       path: "/",
@@ -16,14 +17,15 @@ function App() {
     {
       path: "/myrepos",
       element: <MyRepos />,
-      // errorElement: <ErrorPage />,
+      errorElement: <ErrorPage />,
     },
     {
       path: "/repodetails/:id",
       element: <RepoDetails />,
-      // errorElement: <ErrorPage />,
+      errorElement: <ErrorPage />,
     },
   ]);
+
   return (
     <div className="App">
       <RouterProvider router={router} />

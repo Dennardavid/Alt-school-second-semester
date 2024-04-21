@@ -5,6 +5,7 @@ import RepoListComponent from "../components/repolist";
 import "../App.css";
 
 function MyRepos() {
+  /* Page to view the fetched repos on a single page */
   return (
     <div className="repopage">
       <Navbar />

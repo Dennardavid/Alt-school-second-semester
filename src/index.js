@@ -6,6 +6,7 @@ import { ErrorBoundary } from "react-error-boundary";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
+  /* Error boundary call on the App component */
   <ErrorBoundary
     FallbackComponent={<ErrorFetchingPage />}
     onError={() => {

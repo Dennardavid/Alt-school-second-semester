@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 function Navbar() {
   /* List rendering for the navbar linking to other pages */
   const pages = [
+    /*  Navlink to enable link styling*/
     <NavLink
       style={({ isActive }) =>
         isActive

@@ -7,9 +7,11 @@ import "../App.css";
 import { FaCodeFork, FaEye, FaGithub, FaRegStar } from "react-icons/fa6";
 
 function RepoDetails() {
+  /* States used in the code */
   const { id } = useParams();
   const [details, setDetails] = useState({});
 
+  /* Use effeect to fetch repo details by id */
   useEffect(() => {
     fetch(`https://api.github.com/repos/Dennardavid/${id}`)
       .then((response) => response.json())
@@ -19,6 +21,7 @@ function RepoDetails() {
       });
   }, [id]);
 
+  /* Return of each repo details on a single page as a card */
   return (
     <div id="repodetail">
       <Navbar />
@@ -43,7 +46,6 @@ function RepoDetails() {
               Forks: {details.forks}
             </p>
           </div>
-
           <p>
             Main Language:{" "}
             {details.language === null ? "none" : details.language}
@@ -51,6 +53,8 @@ function RepoDetails() {
           <p>License: {details.license === null ? "none" : details.license}</p>
           <p>Date created: {details.created_at}</p>
           <p>Visibility: {details.visibility}</p>
+
+          {/* Button to view repo on github */}
           <div className="buttondiv">
             <button className="page_buttons">
               <a

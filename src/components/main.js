@@ -4,6 +4,7 @@ import "./main.css";
 import RepoListComponent from "./repolist";
 
 function HeroSection() {
+  /* Hero section component that display hero section and repo list */
   return (
     <main>
       <section className="hero">

@@ -4,14 +4,12 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 
 function Footer() {
-  /* List rendering for the footer */
-
-  /* const socialLinks = socials.map((socials) => {
-    return <li key={socials}>{socials}</li>;
-  }); */
   return (
+    /* Footer Component */
     <footer className="footer">
       <h2>DOUBLED</h2>
+
+      {/* Social links */}
       <ul className="footer-list">
         <li>
           <a href="https://github.com/Dennardavid" className="socials">

@@ -5,12 +5,12 @@ import "./repolist.css";
 import { FaGithub } from "react-icons/fa6";
 
 function RepoListComponent() {
-  /* states */
+  /* states used in the code */
   const [repo, setUserRepo] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [, setPrevPage] = useState(currentPage);
 
-  /* API fetch n */
+  /* API fetch to return 12 repos on the current page */
   const fetchMyRepos = () => {
     fetch(
       `https://api.github.com/users/Dennardavid/repos?per_page=12&page=${currentPage}`
@@ -24,10 +24,12 @@ function RepoListComponent() {
       });
   };
 
+  /* useEffect calling the fetched repo */
   useEffect(() => {
     fetchMyRepos();
   }, [currentPage]);
 
+  /* Mapping through the fetched repos and returning them in articles  */
   const repoElements = repo.map((repoElement) => {
     return (
       <Link to={`/repodetails/${repoElement.name}`} className="repolink">
@@ -54,6 +56,8 @@ function RepoListComponent() {
         </h2>
       </u>
       <section className="repo-container">{repoElements}</section>
+
+      {/* Buttons to handle pagination */}
       <div className="buttondiv">
         <button
           onClick={() => {
