@@ -1,12 +1,12 @@
 import Errorpic from "../assets/pngwing.com.png";
 import "./Errorpage.css";
 
-function ErrorFetchingPage() {
+function ErrorFetchingPage({ error }) {
   return (
     <div className="fullpage">
       <img src={Errorpic} alt="Error" className="errorimg " />
       <h1 className="errorheader">Error!!</h1>
-      <p>There was an error fetching page...</p>
+      <p>{error.message}</p>
     </div>
   );
 }
