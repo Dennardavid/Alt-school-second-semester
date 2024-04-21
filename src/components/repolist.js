@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./repolist.css";
+import { FaGithub } from "react-icons/fa6";
 
 function RepoListComponent() {
   /* states */
@@ -31,6 +32,10 @@ function RepoListComponent() {
     return (
       <Link to={`/repodetails/${repoElement.name}`} className="repolink">
         <article className="card" key={repoElement.id}>
+          <div className="just">
+            <FaGithub className="justimg" />
+          </div>
+
           <h2 className="repoheader">{repoElement.name}</h2>
           <p className="visibility">Visibility: {repoElement.visibility}</p>
           <div className="buttondiv">
