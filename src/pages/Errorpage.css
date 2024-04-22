@@ -17,3 +17,22 @@
   font-style: normal;
   color: #f05323;
 }
+@media screen and (max-width: 430px) {
+  .errorimg {
+    width: 30%;
+  }
+  .errorheader {
+    font-size: 70px;
+    margin-top: -30px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .errorimg {
+    width: 40%;
+  }
+  .errorheader {
+    font-size: 60px;
+    margin-top: -30px;
+  }
+}

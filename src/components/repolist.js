@@ -70,7 +70,7 @@ function RepoListComponent() {
               setCurrentPage(currentPage - 1);
             }
           }}
-          className="page_buttons"
+          className="page_buttons below"
         >
           Previous page
         </button>
@@ -81,7 +81,7 @@ function RepoListComponent() {
               setCurrentPage(currentPage + 1);
             }
           }}
-          className="page_buttons"
+          className="page_buttons below"
         >
           next page
         </button>

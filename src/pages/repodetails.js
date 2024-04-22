@@ -18,6 +18,9 @@ function RepoDetails() {
       .then((data) => {
         setDetails(data);
         console.log(data);
+      })
+      .catch((error) => {
+        console.log(error);
       });
   }, [id]);
 

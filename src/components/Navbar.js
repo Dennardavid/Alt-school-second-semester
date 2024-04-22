@@ -1,6 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
+import { FaBars } from "react-icons/fa6";
 
 function Navbar() {
   /* List rendering for the navbar linking to other pages */
@@ -13,7 +14,7 @@ function Navbar() {
           : { color: "#ffff" }
       }
       to="/"
-      className="list"
+      className="list-item"
     >
       Home
     </NavLink>,
@@ -24,7 +25,7 @@ function Navbar() {
           : { color: "#ffff" }
       }
       to="/myrepos"
-      className="list"
+      className="list-item"
     >
       MyRepos
     </NavLink>,
@@ -42,6 +43,7 @@ function Navbar() {
       <nav className="Nav">
         <h2>DOUBLED</h2>
         <ul className="list">{navbarItems}</ul>
+        <FaBars className="Hamburger" />
       </nav>
     </header>
   );
