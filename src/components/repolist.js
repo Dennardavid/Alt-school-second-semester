@@ -27,7 +27,7 @@ function RepoListComponent() {
   /* useEffect calling the fetched repo */
   useEffect(() => {
     fetchMyRepos();
-  }, [currentPage]);
+  });
 
   /* Mapping through the fetched repos and returning them in articles  */
   const repoElements = repo.map((repoElement) => {
